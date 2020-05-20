@@ -24,8 +24,8 @@ public class Practice3{
 		inst = tmp.split(" ")[0].toUpperCase();
 		if (inst.equals("COPY")) {
 			try {
-				in = new BufferedInputStream(new FileInputStream(tmp.split(" ")[1]));
-				out = new BufferedOutputStream(new FileOutputStream(tmp.split(" ")[2]));
+				in = new BufferedInputStream(new FileInputStream(tmp.split(" ")[1]), 10000);
+				out = new BufferedOutputStream(new FileOutputStream(tmp.split(" ")[2]), 10000);
 				
 				start = System.currentTimeMillis();
 				while ((c = in.read()) != -1) {
